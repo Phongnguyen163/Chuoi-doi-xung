@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" placeholder="Nhap chuoi" id="ip">
+<button onclick="Ktra()">Kiem tra</button>
+<script>
+    function isPalindrome(s) {
+        let t;
+        for (let i = 0; i < s.length / 2; i++) {
+            if (s[i] === s[s.length - i - 1]) {
+                t = true;
+            } else {
+                t = false;
+            }
+        }
+        return t;
+    }
+    function Ktra () {
+        let a = document.getElementById('ip');
+        let result = isPalindrome(a.value);
+        if (result === true) {
+            alert("Day la chuoi doi xung!");
+        } else {
+            alert("Day khong phai la chuoi doi xung!");
+        }
+    }
+</script>
+</body>
+</html>
